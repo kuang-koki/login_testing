@@ -1,0 +1,16 @@
+	it('click profile-button and check',function(){
+// find the profile button
+		var profile_but = element(by.className('menu-desktop')).element(by.className('fullOpacity')).element(by.className('menu-link'));
+// click button
+		profile_but.click();
+//define elements in the page
+		//var Close_Icon = element(by.css('login-iframe')).element(by.css('iframe-dialog-close'));                                       
+		//var Mail_Inputfield =  element(by.css('login-iframe')).element(by.id('mat-input-1'));                                
+		//var Password_Inputfield = element(by.css('login-iframe')).element(by.id('mat-input-2'));                             
+		//var Forgot Password_Button = element(by.css('login-iframe')).element(by.partialLinkText('Passwort vergessen'));                   
+		//var Register_Button = element(by.css('login-iframe')).                                 
+		//var Login_Button = element(by.css('login-iframe')).element(by.cssContainingText('life-primary-btn', 'Anmelden'));  
+//check the elements
+		//expect(Close_Icon.isPresent()).toBe(true);
+		
+	});
