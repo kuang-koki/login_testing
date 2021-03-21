@@ -21,10 +21,11 @@ describe('CGM_CLICKDOC_application_Testing', function(){
 	it('click profile-button and check',function(){
 
 		browser.ignoreSynchronization = true;
+		
 		browser.get('https://demo.clickdoc.de/cd-de/search');
-		browser.driver.sleep(1000);	
+		browser.driver.sleep(3000);	
 
-		element(by.xpath('//a[@angularticsaction="Open login iframe"]/span[@class="bold-menu-text ng-tns-c117-0"]')).click();
+		element(by.xpath('//a[@angularticsaction="Open login iframe"]')).click();
 
 		
 
