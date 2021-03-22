@@ -25,17 +25,18 @@ describe('CGM_CLICKDOC_application_Testing', function(){
 		browser.get('https://demo.clickdoc.de/cd-de/search');
 		browser.driver.sleep(3000);	
 
-		var EC = protractor.ExpectedConditions;
-		var log_button = element(by.xpath('//ul[@class="menu-desktop d-lg-block d-md-none d-sm-none ng-tns-c117-0"]/li[@class="menu-item fullOpacity ng-tns-c117-0 ng-star-inserted"]/a[@angularticsaction="Open login iframe"]'));
-		var isClickable = EC.elementToBeClickable(log_button);
-		browser.wait(isClickable, 5000);
-		log_button.click();
+		//var EC = protractor.ExpectedConditions;
+		var log_button = element(by.xpath('//ul[@class="menu-desktop d-lg-block d-md-none d-sm-none ng-tns-c117-0"]/li[@class="menu-item fullOpacity ng-tns-c117-0 ng-star-inserted"]/a'));
+		//var isClickable = EC.elementToBeClickable(log_button);
+		//browser.wait(isClickable, 5000);
+		browser.actions().mouseMove(log_button).doubleClick().perform();
+		
 
-		//browser.driver.sleep(5000);
+		browser.driver.sleep(8000);
 
-		var Close_Icon = element(by.css('login-iframe')).element(by.css('iframe-dialog-close'));                                       
+		var login_window = element(by.tagName('app-iframe-dialog'));                                       
 	
-		expect(Close_Icon.isPresent()).toBe(true);
+		expect(login_window.isPresent()).toBe(true);
 		
 	});
 
